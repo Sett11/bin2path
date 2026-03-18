@@ -26,8 +26,10 @@ def animate(
     ax.set_facecolor("black")
 
     if title is None:
-        title = f"bin2path animation: {path.metadata.original_number}"
-    ax.set_title(title)
+        title = f"Animation of number {path.metadata.original_number}"
+    # Заголовок сверху вне области осей
+    fig.suptitle(title, fontsize=14, fontweight="bold", color="white", y=0.98)
+    fig.subplots_adjust(top=0.90)
 
     # limits
     max_range = np.max(np.abs(vertices).max(axis=0)) * 1.1
@@ -140,8 +142,10 @@ def rotate_view(
     ax.set_facecolor("black")
 
     if title is None:
-        title = f"bin2path rotate: {path.metadata.original_number}"
-    ax.set_title(title, color="white")
+        title = f"Rotation of number {path.metadata.original_number}"
+    # Заголовок сверху вне области осей
+    fig.suptitle(title, fontsize=14, fontweight="bold", color="white", y=0.98)
+    fig.subplots_adjust(top=0.90)
 
     max_range = np.max(np.abs(vertices).max(axis=0)) * 1.1
     ax.set_xlim([-max_range, max_range])

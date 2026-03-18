@@ -280,8 +280,14 @@ def visualize(
         ax.set_zlabel("Z")
     
     if title is None:
-        title = f"bin2path: {path.metadata.original_number} (bits: {path.metadata.bits_length})"
-    ax.set_title(title, fontsize=14, fontweight="bold")
+        title = (
+            f"Visualization of number {path.metadata.original_number} "
+            f"(bits: {path.metadata.bits_length})"
+        )
+    # Заголовок сверху вне области осей (через suptitle + rect в tight_layout)
+    title_color = "white" if dark_theme else "black"
+    fig.suptitle(title, fontsize=16, fontweight="bold", color=title_color, y=0.99)
+    fig.subplots_adjust(top=0.90)
     
     # Set viewing angle (with optional авто-подбором)
     if auto_view and len(vertices) > 1:
@@ -371,7 +377,7 @@ def visualize(
     if hide_axes:
         ax.set_axis_off()
 
-    plt.tight_layout()
+    plt.tight_layout(rect=(0, 0, 1, 0.93))
     
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches="tight", facecolor="white")
