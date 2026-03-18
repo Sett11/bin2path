@@ -26,7 +26,7 @@ from bin2path.compare import compare
 from bin2path.validate import validate, is_valid
 from bin2path.batch import batch_encode, batch_decode
 
-__version__ = "0.1.1"
+__version__ = "0.1.4"
 __author__ = "bin2path"
 
 __all__ = [

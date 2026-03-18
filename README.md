@@ -204,4 +204,4 @@ MIT License
 
 ## See Also
 
-See the detailed specification in the repository: [`plan.md`](https://github.com/Sett11/bin2path/blob/main/plan.md) (including the local-orientation rules).
+See the project repository for the detailed specification of the scheme (including the local-orientation rules).
