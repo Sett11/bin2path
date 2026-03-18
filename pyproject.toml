@@ -1,0 +1,40 @@
+[project]
+name = "bin2path"
+version = "0.1.0"
+description = "Transform numbers into 3D geometric paths - binary visualization"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "bin2path"}]
+license = "MIT"
+keywords = ["binary", "3d", "visualization", "geometry", "hashing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "matplotlib>=3.7.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "build>=1.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Sett11/bin2path"
+Repository = "https://github.com/Sett11/bin2path"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

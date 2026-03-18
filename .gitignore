@@ -1,0 +1,49 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.pyd
+*.so
+*.dylib
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Cursor files
+.cursor/
+
+# Virtual environments
+.venv/
+venv/
+.env/
+.env.*
+
+# Demo output
+main.py
+*.png
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.hypothesis/
+
+# Type checking / linters
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+
+# Task runners
+.tox/
+.nox/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
